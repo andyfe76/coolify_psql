@@ -1,9 +1,6 @@
 version: '3'
-
-postgres:
-  restart: always
-  image: postgres:latest
-  ports:
-    - "5432:5432"
-  volumes:
-    - /ssd/pg0:/data
+services:
+  database:
+    image: "postgres"
+    volumes:
+      - /ssd/pg0:/var/lib/postgresql/data/ # persist data even if container shuts down
