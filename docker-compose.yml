@@ -1,0 +1,9 @@
+version: '3'
+
+postgres:
+  restart: always
+  image: postgres:latest
+  ports:
+    - "5432:5432"
+  volumes:
+    - /ssd/pg0:/data
